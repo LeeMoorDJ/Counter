@@ -8,11 +8,11 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    
-    @IBOutlet weak var counterButton: UIButton!
     @IBOutlet weak var counterValue: UILabel!
     
+    @IBOutlet weak var clearButton: UIButton!   
+    
+    @IBOutlet weak var addCountButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,15 +20,27 @@ class ViewController: UIViewController {
     }
     
     
-    @IBAction func buttonDidCount(_ sender: Any) {
-        print("Клик по счетчику")
+    @IBAction func buttonClearCount(_ sender: Any) {
+        print("Очистить счётчик")
         
-        counter += 1
+        counter = 0
         
         print(counter)
         
         counterValue.text = "Значение счётчика :  \(counter)"
         
+    }
+    
+    
+    @IBAction func removeCount(_ sender: Any) {
+        
+        print("Убавили 1")
+        
+        counter -= 1
+        
+        print(counter)
+        
+        counterValue.text = "Значение счётчика :  \(counter)"
     }
     
     private var counter = 0
