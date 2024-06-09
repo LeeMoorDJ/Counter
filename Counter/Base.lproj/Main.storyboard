@@ -16,6 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pld-W7-UlT">
+                                <rect key="frame" x="74" y="464" width="245" height="244"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.41526544878709593" green="0.21543599520515688" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Давай посчитаем" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="buttonDidCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z3V-xf-ggk"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Значение счётчика : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXA-ZL-PW8">
                                 <rect key="frame" x="69" y="230" width="254" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -23,45 +33,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgE-F0-OTM">
-                                <rect key="frame" x="108" y="354" width="176" height="178"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="+" cornerStyle="capsule"/>
-                                <connections>
-                                    <action selector="addToCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hli-Ie-Exm"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGG-PI-do1">
-                                <rect key="frame" x="130" y="583" width="133" height="108"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="-" cornerStyle="capsule"/>
-                                <connections>
-                                    <action selector="removeCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lCh-6E-ES1"/>
-                                    <action selector="removeFromCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTU-cp-hVb"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pld-W7-UlT">
-                                <rect key="frame" x="278" y="732" width="79" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Заново" cornerStyle="capsule">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="buttonDidCount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z3V-xf-ggk"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <outlet property="addCountButton" destination="jgE-F0-OTM" id="0PJ-Eg-BzD"/>
                         <outlet property="counterButton" destination="Pld-W7-UlT" id="RU1-fH-z4z"/>
-                        <outlet property="counterValue" destination="aXA-ZL-PW8" id="rTD-04-b6f"/>
-                        <outlet property="removeCountButton" destination="rGG-PI-do1" id="7Xr-IN-fTr"/>
+                        <outlet property="counterValue" destination="aXA-ZL-PW8" id="nEF-RC-P84"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
