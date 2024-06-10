@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var counterValue: UILabel!
     @IBOutlet weak var removeCountButton: UIButton!
     @IBOutlet weak var clearCountButton: UIButton!
+    @IBOutlet weak var historyText: UITextView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,12 @@ class ViewController: UIViewController {
         counterButton.tintColor = .red
         removeCountButton.tintColor = .blue
         clearCountButton.tintColor = .darkGray
+        historyText.text = "История изменений:\n"
+        historyText.isEditable = false
+        historyText.isScrollEnabled = true
+        
+        
+        
     }
     
     
@@ -32,7 +40,9 @@ class ViewController: UIViewController {
         
         print(counter)
         
-        counterValue.text = "Значение счётчика : \(counter)"
+        counterValue.text = "Значение счётчика: \(counter)"
+        
+        historyText.text.append("значение изменено на +1\n")
         
     }
     
@@ -46,7 +56,9 @@ class ViewController: UIViewController {
         
         print(counter)
         
-        counterValue.text = "Значение счётчика : \(counter)"
+        counterValue.text = "Значение счётчика: \(counter)"
+        
+        historyText.text.append("значение изменено на -1\n")
     }
     
     
@@ -57,11 +69,19 @@ class ViewController: UIViewController {
         
         print(counter)
         
-        counterValue.text = "Значение счётчика : \(counter)"
+        counterValue.text = "Значение счётчика: \(counter)"
+        
+        historyText.text.append("значение сброшено\n")
     }
     
     
     private var counter = 0
+// "значение изменено на +1"
+// "значение изменено на -1"
+// "значение сброшено"
+    
+    
+  
 
 }
 
